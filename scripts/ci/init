@@ -1,0 +1,1 @@
+docker run --rm -it -v /home/godot/projects/golden-platform/styleguide:/app -w /app platformos/testcafe:20220915 /app/scripts/init

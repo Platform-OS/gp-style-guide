@@ -1,0 +1,22 @@
+[submodule "modules/core"]
+	path = modules/core
+	url = https://github.com/Platform-OS/pos-module-core/
+	branch = master
+[submodule "modules/theme-manager"]
+	path = modules/theme-manager
+	url = https://github.com/Platform-OS/pos-module-theme-manager/
+	branch = master
+[submodule "modules/admin"]
+	path = modules/admin
+	url = https://github.com/Platform-OS/pos-module-admin/
+	branch = master
+[submodule "modules/components"]
+	path = modules/components
+	url = https://github.com/Platform-OS/pos-module-components/
+	branch = master
+[submodule "modules/user"]
+	path = modules/user
+	url = https://github.com/Platform-OS/pos-module-user
+[submodule "modules/permission"]
+	path = modules/permission
+	url = https://github.com/Platform-OS/pos-module-permission/

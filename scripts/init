@@ -1,0 +1,13 @@
+set -eu
+
+git config --global --add safe.directory /app
+
+git submodule add https://github.com/Platform-OS/pos-module-core/ modules/core || echo "core OK"
+git submodule add https://github.com/Platform-OS/pos-module-theme-manager/ modules/theme-manager || echo "theme-manager OK"
+git submodule add https://github.com/Platform-OS/pos-module-admin/ modules/admin || echo "admin OK"
+git submodule add https://github.com/Platform-OS/pos-module-components/ modules/components || echo "components OK"
+git submodule add https://github.com/Platform-OS/pos-module-user modules/user || echo "user OK"
+git submodule add https://github.com/Platform-OS/pos-module-permission/ modules/permission || echo "permission OK"
+
+sed -i 's/git@github.com\:/https:\/\/github.com\//' .gitmodules
+git submodule update --init --recursive
