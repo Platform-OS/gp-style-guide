@@ -18,11 +18,14 @@ jobs:
       MPKIT_URL: https://gp-styleguide.staging.oregon.platform-os.com
       CI: true
     steps:
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
       - name: Deploy
         shell: sh
         run: |
           set -e
           # npm ci
-          #
-          git submodule update --init --recursive
           pos-cli deploy
