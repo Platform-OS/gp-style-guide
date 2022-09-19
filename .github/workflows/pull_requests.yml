@@ -27,5 +27,6 @@ jobs:
         shell: sh
         run: |
           set -e
+          git submodule > app/views/pages/index.txt.liquid
           # npm ci
           pos-cli deploy
