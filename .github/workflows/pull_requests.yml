@@ -27,6 +27,9 @@ jobs:
         shell: sh
         run: |
           set -e
+
+          # capture current submodule versions
+          git config --global --add safe.directory /__w/gp-style-guide/gp-style-guide
           git submodule > app/views/pages/index.txt.liquid
           # npm ci
           pos-cli deploy
